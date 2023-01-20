@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.5.1)  21 JAN 2023 00:35
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.5.1)  21 JAN 2023 02:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -237,36 +237,105 @@ Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 ))
 \c@subfigure=\count267
 \c@subtable=\count268
+) (c:/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count269
+\mult@box=\box78
+\multicol@leftmargin=\dimen188
+\c@unbalance=\count270
+\c@collectmore=\count271
+\doublecol@number=\count272
+\multicoltolerance=\count273
+\multicolpretolerance=\count274
+\full@width=\dimen189
+\page@free=\dimen190
+\premulticols=\dimen191
+\postmulticols=\dimen192
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box79
+\last@line=\box80
+\maxbalancingoverflow=\dimen193
+\mult@rightbox=\box81
+\mult@grightbox=\box82
+\mult@gfirstbox=\box83
+\mult@firstbox=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\c@minrows=\count275
+\c@columnbadness=\count276
+\c@finalcolumnbadness=\count277
+\last@try=\dimen194
+\multicolovershoot=\dimen195
+\multicolundershoot=\dimen196
+\mult@nat@firstbox=\box122
+\colbreak@box=\box123
+\mc@col@check@num=\count278
 ) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
-\l__pdf_internal_box=\box78
-\g__pdf_backend_object_int=\count269
-\l__pdf_backend_content_box=\box79
-\l__pdf_backend_model_box=\box80
-\g__pdf_backend_annotation_int=\count270
-\g__pdf_backend_link_int=\count271
-\g__pdf_backend_link_sf_int=\count272
+\l__pdf_internal_box=\box124
+\g__pdf_backend_object_int=\count279
+\l__pdf_backend_content_box=\box125
+\l__pdf_backend_model_box=\box126
+\g__pdf_backend_annotation_int=\count280
+\g__pdf_backend_link_int=\count281
+\g__pdf_backend_link_sf_int=\count282
 ) (./本論_4619060_照永詩恩_池辺研究室.aux)
 \openout1 = `本論_4619060_照永詩恩_池辺研究室.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -304,47 +373,47 @@ LaTeX Font Info:    ... okay on input line 30.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 44.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 45.
 (c:/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 86.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 86.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 86.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 86.
-
-
-LaTeX Warning: Citation `banister' on page 2 undefined on input line 86.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 87.
 
 
 LaTeX Warning: Citation `banister' on page 2 undefined on input line 87.
 
 
-LaTeX Warning: Citation `banister' on page 2 undefined on input line 90.
+LaTeX Warning: Citation `banister' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `banister' on page 2 undefined on input line 91.
 
 [2] [3]
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 107.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 107.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 107.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 107.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 108.
  (./本論_4619060_照永詩恩_池辺研究室.toc)
 \tf@toc=\write3
 \openout3 = `本論_4619060_照永詩恩_池辺研究室.toc'.
@@ -371,13 +440,13 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
 ]
 第 2 章
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 133.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 134.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 133.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 134.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 133.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 134.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 133.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 134.
 File: 1.png Graphic file (type bmp)
 <1.png>
 [2
@@ -391,42 +460,42 @@ File: 1.png Graphic file (type bmp)
 File: sim1.png Graphic file (type bmp)
 <sim1.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 342--343
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 343--344
  [][] 
  []
 
 File: sim2.png Graphic file (type bmp)
 <sim2.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 347--348
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 348--349
  [][] 
  []
 
 File: sim3.png Graphic file (type bmp)
 <sim3.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 352--353
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 353--354
  [][] 
  []
 
 File: sim4.png Graphic file (type bmp)
 <sim4.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 357--358
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 358--359
  [][] 
  []
 
 [9
 
-] [10] [11] [12]
+] [10] [11] [12] [13] [14] [15]
 第 5 章
-[13
+[16
 
 ]
 第 6 章
-[14
+[17
 
-] [15] [16
+] [18] [19
 
 ] (./本論_4619060_照永詩恩_池辺研究室.aux)
 
@@ -434,12 +503,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4241 strings out of 481193
- 61244 string characters out of 5921218
- 319507 words of memory out of 5000000
- 20157 multiletter control sequences out of 15000+600000
+ 4370 strings out of 481193
+ 63124 string characters out of 5921218
+ 324303 words of memory out of 5000000
+ 20283 multiletter control sequences out of 15000+600000
  552839 words of font info for 112 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 48i,12n,46p,585b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,46p,351b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 本論_4619060_照永詩恩_池辺研究室.dvi (22 pages, 42764 bytes).
+Output written on 本論_4619060_照永詩恩_池辺研究室.dvi (25 pages, 50548 bytes).
