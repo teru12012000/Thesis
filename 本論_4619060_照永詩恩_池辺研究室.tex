@@ -1,0 +1,472 @@
+\documentclass[12pt,fleqn]{jreport}
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{epsbox}
+\usepackage{graphics,latexsym}
+\usepackage{ascmac}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+%\usepackage{epsbox}
+\usepackage{float}
+\usepackage{here}
+\usepackage{lscape}
+\usepackage{longtable}
+\renewcommand{\bibname}{参考文献}
+\usepackage{geometry}
+\usepackage{subcaption}
+
+\topmargin         3mm  % トップとヘッダの間隔
+\headheight        0mm  % ヘッダの高さ
+\headsep           0mm  % ヘッダとテキストの間隔
+\textwidth       170mm  % テキストの幅
+\textheight      245mm  % テキストの高さ
+\oddsidemargin  -2.5mm  % サイドとテキストの間隔（奇数ページ）
+\evensidemargin -2.5mm  % サイドとテキストの間隔（偶数ページ）
+
+\pagestyle{plain}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  {\Huge 卒　業　研　究　論　文}
+\end{center}
+\vspace{2cm}
+\begin{center}
+  {\huge 2022 年度}
+\end{center}
+\vspace{2cm}
+\begin{flushleft}
+  {\LARGE　題　　目　}
+\end{flushleft}
+\begin{center}
+  {\LARGE \underline{陸上競技の長距離種目における}\\
+    \vspace{0.2cm}
+    \underline{最適な練習組合せ}}\\
+\end{center}
+\vspace{0.5cm}
+\begin{flushleft}
+  {\LARGE　英文題目　}
+\end{flushleft}
+\begin{center}
+  {\LARGE \underline{Formulation of the single container loading }\\
+    \vspace{0.2cm}
+    \underline{ problem with load balance constraints and }\\
+    \vspace{0.2cm}
+    \underline {its computational evaluation}}\\
+\end{center}
+\vspace{3cm}
+\begin{flushleft}
+  {\Large　指導教員　\underline{ 池辺　淑子准教授,西田　優樹助教 }}\\
+  \vspace{5mm}
+  {\Large　氏　　名　\underline{ 照永　詩恩  }}\\
+  \vspace{5mm}
+  {\Large　学籍番号　\underline{ 4619060 }}
+\end{flushleft}
+\vspace{1.5cm}
+\begin{flushright}
+  {\Large 東京理科大学　工学部　情報工学科}\\
+\end{flushright}
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+  {\huge 卒業論文要旨}
+\end{center}
+\vspace{3cm}
+\large
+今日，学生や一般市民が多くのスポーツ競技に参加している．その中で経験豊富な指導者の指導が受けられる人は少ない．
+経験豊富な指導者の指導が受けられない場合は，本人自らが練習メニューを決めなければならない
+一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的に強度が高い練習を継続していくほど
+疲労は蓄積し，試合で満足のいく結果が出せなくなってしまう．逆に，強度の低い練習ばかり実施したり
+全く練習をしなかったりすると競技力の不足によって同じく試合で満足のいく結果が出せなくなる．
+このように試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．
+トレーニングに関する理論として1970年から1990年代にかけてBanistaerを中心とした研究グループによって
+フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する\cite{banister}．
+フィットネス疲労理論\cite{banister}はトレーニングをすると
+身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
+とるとパフォーマンスが算出されるという考え方に基づく理論である．
+本研究では，陸上競技の長距離種目を例にフィットネス疲労理論\cite{banister}を用いて走力を向上させるために
+パフォーマンスを低下させずにフィットネスを向上させると事を目的に最適なトレーニングメニューの作成を定式化し，
+出力された練習メニューを実施して実際に行われた試合にどのような影響が出たのかを検証した．
+%\cite{fitfig}
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+  {\huge 卒業論文要旨}
+\end{center}
+\vspace{3cm}
+
+
+
+\newpage
+\pagenumbering{roman}   %目次ページ番号のスタイル
+\setlength{\baselineskip}{20pt}   %行間幅
+\tableofcontents   %目次を付ける
+\newpage
+\listoffigures   %図目次を付ける
+\listoftables   %表目次を付ける
+\clearpage   %目次と本文を分ける
+\pagenumbering{arabic}   %本文ページ番号のスタイル
+%%%%%これ以下, 本文%%%%%
+\newpage
+\chapter{はじめに}
+\large
+今日，学生や一般市民が多くのスポーツ競技に参加している．その中で経験豊富な指導者の指導が受けられる人は少ない．
+経験豊富な指導者の指導が受けられない場合は，本人自らが練習メニューを決めなければならない
+一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的には，強度が高い練習を継続していくほど
+疲労は蓄積し，試合で満足のいく結果が出せなくなってしまう．逆に，強度の低い練習ばかり実施したり
+全く練習をしなかったりすると競技力の不足により同じく試合で満足のいく結果が出せなくなる．
+このようにトレーニングメニューの調整をするのが容易ではない．トレーニングに関する理論として1970年から1990年代にかけてBanisterを中心とした研究グループによって
+フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する\cite{bani}．
+フィットネス疲労理論\cite{bani}は，トレーニングをすると
+身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
+とるとパフォーマンスが算出されるという考え方に基づく理論である．
+本研究では，陸上競技の長距離種目を例にフィットネス疲労理論\cite{bani}を用いて最適なトレーニングメニューの作成を定式化する．
+\newpage
+\chapter{問題設定}
+本研究ではフィットネス疲労理論\cite{bani}を用いて
+陸上競技長距離種目を例にパフォーマンスを低下させずにフィットネスを向上させて走力を向上させる目的とする．
+\vspace{1cm}
+\section{フィットネス，疲労，パフォーマンス}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=15cm,height=5cm]{1.png}
+  \end{center}
+  \caption{フィットネス疲労理論の概念図}
+\end{figure}
+フィットネス疲労理論\cite{bani}は図で表すと図\ 2.1になる，数式で表すと時刻$t$において投与されたインプット$w(t)$のトレーニング負荷は，
+正の効果をもたらすフィットネス$g(t)$と，負の効果をもたらす疲労$h(t)$が
+拮抗して生体応答を引き起こし，両者の和としてパフォーメンス$p(t)$
+がアウトプットされるというものである．\\
+\par 時刻$t$におけるトレーニング負荷関数$w(t)$は競技によって異なるが，フィットネスと疲労
+とパフォーマンスを表す関数$g(t)，h(t)，p(t)$は以下のとおりである．
+\begin{eqnarray}
+  g(t)&=&w(t)+g(t-i)e^{-\frac{1}{\tau_1}}\label{eq:fit1}\\%(2)
+  h(t)&=&w(t)+h(t-i)e^{-\frac{1}{\tau_2}}\label{eq:fig1}\\%(3)
+  p(t)&=&k_1g(t)-k_2h(t)\label{eq:per1}%(4)
+\end{eqnarray}
+ここで，
+\begin{eqnarray}
+  \tau_1&：&フィットネスの時定数であり\tau_1=45と設定\nonumber\\
+  \tau_2&：&疲労の時定数であり\tau_2=15と設定\nonumber\\
+  k_1&：&フィットネスの重みづけ係数でありK_1=1と設定\nonumber\\
+  k_2&：&疲労の重みづけ係数でありk_2=2と設定\nonumber\\
+  i&：&tまでのトレーニング期間であり本研究ではi=1と設定\nonumber
+\end{eqnarray}
+
+$\tau_1$，$\tau_2$，$k_1$，$k_2$はBanisterが1991年に設定すべきと提唱している\cite{fitfig}．
+
+\section{トレーニング負荷}
+また，トレーニング負荷$w(t)$の算出方法はいくつかある．例えば平均心拍数と最大心拍数を用いて求める方法や，
+サッカーにおいてそれぞれのトレーニングメニューの内容によって定められている強度と実施時間で求める方法などがある\cite{fitfig1}．
+本研究では対象とする陸上競技長距離種目とし以下のものとする．\\
+\vspace{1cm}
+\begin{eqnarray}
+  w(t)&=&ランニング強度(au)\times 距離(km)\times 路面係数\times 天候係数\label{eq:w1}%(5)
+\end{eqnarray}\\
+\vspace{1cm}
+それぞれの各係数については以下のとおりである．\\
+\vspace{1cm}
+\begin{description}
+  \item[ランニング強度係数] 　\\
+        1kmあたりのペースによって値が定まり，速ければ速いほど値は大きくなる
+  \item[路面係数] 　\\
+        走る路面によってそれぞれ値が定められている．走る路面の種類にはトラック，ロード，グラウンドがある
+  \item[天候係数] 　\\
+        晴か雨なのか，また暑いのか涼しいのかによって値が定まるものである
+\end{description}
+これらの係数以下の表に示す．
+\vspace{1cm}
+\begin{longtable}{|c|c|c|c|}
+  \caption{1kmあたりのペースとランニング係数}       \\
+  \hline
+  ペース(1km)      & 強度 & ペース(1km)      & 強度 \\
+  \hline
+  $\sim$5'00"      & 1.0  & 3'05$\sim$3'01"  & 8.5  \\
+  \hline
+  4'59"$\sim$4'00" & 1.5  & 3'00"$\sim$2'56" & 10.0 \\
+  \hline
+  3'59"$\sim$3'41" & 3.0  & 2'55$\sim$2'51"  & 11.0 \\
+  \hline
+  3'40"$\sim$3'33" & 3.5  & 2'50"$\sim$2'46" & 12.0 \\
+  \hline
+  3'32"$\sim$3'29" & 4.0  & 2'45$\sim$2'41"  & 16.0 \\
+  \hline
+  3'28"$\sim$3'21" & 4.5  & 2'40$\sim$2'36"  & 20.0 \\
+  \hline
+  3'20"$\sim$5'00" & 1.0  & 2'35"$\sim$      & 24.0 \\
+  \hline
+  3'10"$\sim$3'06" & 8.0  &                  &      \\
+  \hline
+\end{longtable}
+\begin{longtable}{|c|c|}
+  \caption{路面係数}    \\
+  \hline
+  路面       & 路面係数 \\
+  \hline
+  トラック   & 1.00     \\
+  \hline
+  ロード     & 1.10     \\
+  \hline
+  グラウンド & 1.25     \\
+  \hline
+\end{longtable}
+\newpage
+\begin{longtable}{|c|c|}
+  \caption{天候係数}      \\
+  \hline
+  天候         & 天候係数 \\
+  \hline
+  晴れ・暑い   & 1.30     \\
+  \hline
+  晴れ・涼しい & 1.00     \\
+  \hline
+  雨・暑い     & 1.35     \\
+  \hline
+  雨・涼しい   & 1.10     \\
+  \hline
+\end{longtable}
+これらの値については文献\cite{fitfig1}に記載されていたものを利用している．
+\newpage
+\chapter{定式化}
+
+陸上競技の長距離種目における，トレーニングメニュー作成問題定式化の最適化問題として定式化する．
+\vspace{1cm}
+\section{フィットネス，疲労，パフォーマンス}
+トレーニング日を$t$日としてフィットネス，疲労，パフォーマンスを表す関数$g(t)$，$h(t)$，$p(t)$を具体的に記述する．\\
+まず，トレーニング開始時刻を1として$t$日目のフィットネスの関数$g(t)$を求めていく．
+1日目から順に(\ref{eq:fit1})式についてを整理し展開していったもの以下の表に示す．
+\begin{longtable}{|c|c|}
+  \caption{各時刻におけるフィットネス関数}                                 \\
+  \hline
+  時刻     & フィットネス                                                  \\
+  \hline
+  1        & $w(1)$                                                        \\
+  \hline
+  2        & $w(2)+w(1)e^{-\frac{1}{45}}$                                  \\
+  \hline
+  3        & $w(3)+w(2)e^{-\frac{1}{45}}+w(1)e^{-\frac{2}{45}}$            \\
+  \hline
+  $\vdots$ & $\vdots$                                                      \\
+  \hline
+  $t$      & $w(t)+w(t-1)e^{-\frac{1}{45}}+\cdots+w(1)e^{-\frac{t-1}{45}}$ \\
+  \hline
+\end{longtable}
+表\ 3.1より時刻$t$におけるフィットネスの関数$g(t)$を整理すると,
+\begin{eqnarray}
+  g(t)&=&\sum_{i=1}^t w(i)e^{-\frac{t-i}{45}}\label{eq:fit2}%(6)
+\end{eqnarray}
+次に疲労であるがフィットネスと同じやり方で求められる．よって時刻$t$における疲労の関数$h(t)$は以下のようになる．
+\begin{eqnarray}
+  h(t)&=&\sum_{i=1}^t w(i)e^{-\frac{t-i}{15}}\label{eq:fig2}%(7)
+\end{eqnarray}
+最後にパフォーマンスであるが(\ref{eq:per1})式に$k_1=1$，$k_2=2$を代入するだけである．よって時刻$t$におけるパフォーマンスの関数$p(t)$は以下のようになる．
+\begin{eqnarray}
+  p(t)&=&g(t)-2h(t)\label{eq:per2}%(4)
+\end{eqnarray}
+\vspace{1cm}
+\section{記号の定義 }
+定式化においては$i$日目の第$j$メニューについて，
+\begin{eqnarray}
+  A_{ij}&：&i日目における第jメニューのランニング強度\nonumber\\
+  R_{ij}&：&i日目における第jメニューの路面係数\nonumber\\
+  W_{ij}&：&i日目における第jメニューの天候係数\nonumber
+\end{eqnarray}
+を定数にする．
+そして変数を，
+\begin{eqnarray}
+  x_{ij}&：&i日目における第jメニューを実施するか否か(バイナリ変数)\nonumber\\
+  D_{ij}&：&i日目のおける第jメニューの距離(整数値)\nonumber
+\end{eqnarray}
+と設定する．
+\vspace{1cm}
+\section{陸上競技の長距離種目における最適なトレーニングメニューを求める定式化}
+トレーニング期間を全体で$T$日とし，あらかじめ定める$k$種類のメニューの中から各日1つを選択するものとする．
+設定した定数，変数を用いて定式化すると次のようになる．
+\vspace{1cm}
+\begin{eqnarray}
+  \mathop{\rm maximize}&\ \ &\sum_{i=1}^T (\sum_{j=1}^k A_{ij}D_{ij}R_{ij}W_{ij}x_{ij})e^{-\frac{T-i}{45}}\label{eq:max}\\%(10)
+  \mathop{\rm subject\ to}&\ \ &\sum_{j=1}^k x_{ij}\leq 1\ \ (i=1,\cdots , T)\label{eq:st1}\\%(11)
+  &&p(i)\geq P\ \ (i=i_1,\cdots , i_s)\label{eq:st3}%(13)
+\end{eqnarray}
+\vspace{2cm}
+\begin{itemize}
+  \item (\ref{eq:max})式は目的関数である．フィットネスを最大化する
+  \item (\ref{eq:st1})式は各トレーニング日に高々1つのメニューに実施することを示している
+  \item (\ref{eq:st3})式は特定の$i_k$日目にパフォーマンスがあらかじめ定める定義$P$より下がらないことそ示している
+\end{itemize}
+\newpage
+\chapter {数値実験}
+\vspace{1cm}
+2022年12月5日に開催された試合に向けた11月21日から12月4日のトレーニンングメニューの作成を定式化し，
+実際にPythonとGurobiを用いて解き，出力された解を実施して12月5日の試合にどのような影響を
+及ぼしたのかを検証する．
+\section{予備実験}
+この実験ではトレーニングメニューの確定とパフォーマンスの下限を確定させた．
+\subsection{メニューの確定}
+メニューの確定についてはPythonを用いてシミュレーションを行った．
+シミュレーションは日数を31とし4つのパターンを行った．
+\begin{enumerate}
+  \item ジョグのみ
+  \item ペース走を導入
+  \item インターバル走を導入
+  \item 休みを導入
+\end{enumerate}
+細かなメニューについては過去に実施したメニューの中から適当に選んだ．
+それぞれのシミュレーションを実行した結果は以下の通りになった．
+\begin{table}[H]
+  \caption{シミュレーションの結果}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+        & 最終日のフィットネス & 最終日の疲労 & 最終日のパフォーマンス \\
+      \hline
+      1 & 373.40               & -431.92      & -58.82                 \\
+      \hline
+      2 & 500.84               & -611.18      & -110.34                \\
+      \hline
+      3 & 521.18               & -613.47      & -92.29                 \\
+      \hline
+      4 & 384.55               & -459.22      & -74.67                 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{figure}[H]
+  \begin{tabular}{cc}
+    \begin{minipage}[t]{0.45\hsize}
+      \centering
+      \includegraphics[scale=0.5]{sim1.png}
+      \caption{シミュレーション1}
+    \end{minipage} &
+    \begin{minipage}[t]{0.45\hsize}
+      \centering
+      \includegraphics[scale=0.5]{sim2.png}
+      \caption{シミュレーション2}
+    \end{minipage}   \\
+    \begin{minipage}[t]{0.45\hsize}
+      \centering
+      \includegraphics[scale=0.5]{sim3.png}
+      \caption{シミュレーション3}
+    \end{minipage} &
+    \begin{minipage}[t]{0.45\hsize}
+      \centering
+      \includegraphics[scale=0.5]{sim4.png}
+      \caption{シミュレーション4}
+    \end{minipage}   \\
+  \end{tabular}
+\end{figure}
+\section{設定}
+\vspace{1cm}
+トレーニングメニューについては，自身が実施したことのあるトレーニングメニューをまず準備し，
+シミュレーション等を通して検討した結果，4つに絞った．メニューの詳細は表\ 4.1のとおりである．
+\begin{longtable}{|c|c|c|c|}
+  \caption{実施するトレーニングメニュー}                                   \\
+  \hline
+  メニュー                         & トレーニング強度$(A)$ & 路面係数$(R)$ \\
+  \hline
+  速いジョグ                       & 1.0                   & 1.1           \\
+  \hline
+  遅いジョグ                       & 1.5                   & 1.1           \\
+  \hline
+  10000mペース走(ポイント練習)     & 3.5                   & 1.0           \\
+  \hline
+  $1000$m$ \times 5$(ポイント練習) & 8.0                   & 1.0           \\
+  \hline
+\end{longtable}
+天候係数については季節は冬なので全て1とする．
+
+
+\begin{table}[htp]
+  \caption{トラックのパラメータ}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      パラメータ & 値         & パラメータ  & 値     \\
+      \hline
+      $U$        & 6.84(tnf)  & $FT_{max}$  & 7.100  \\
+      $TWB$      & 4.397(m)   & $RT_{max}$  & 19.000 \\
+      $Hd$       & 0.832(m)   & $S_{min}$   & 25\%   \\
+      $Hu$       & 2.800(tnf) & $T_{min}$   & 25\%   \\
+      $P_{max}$  & 19.16(tnf) & $LTR_{max}$ & 10\%   \\
+      \hline
+    \end{tabular}
+  \end{center}
+  %\label{default}
+\end{table}%
+\begin{table}[htp]
+  \caption{コンテナのパラメータ}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      コンテナ & D       & W       & H       \\
+      \hline
+               & 2.33(m) & 5.87(m) & 2.20(m) \\
+      \hline
+    \end{tabular}
+  \end{center}
+  %\label{default}
+\end{table}%
+\newpage
+\section{実験結果}
+表5.3において、Ramosらの計算時間と充填率は100問解いた際の平均値を表しているが、本研究での実験結果は、計算時間の都合上、100問のうち5問解いたものである。また、図5.1は詰め込む直方体の個数を10$\sim$110個まで変化させた際の計算時間の変化を示したグラフである。
+
+case１からcase5にそれぞれ提案アルゴリズムを適用した。step.1として選んで詰める定式化を行なったが、この定式化は最適解が出るまで計算を続けるため,解の改善が行われてから600[s]の間に解の改善が行われない場合、そこで計算をやめ、暫定解としてstep.2に進んだ。step.1での計算時間は暫定解が算出されるまでにかかった時間を表している.
+\begin{table}[h]
+  \caption{実験結果}
+  \begin{center}
+    \begin{tabular}{|cc||r|r|r|}
+      \hline
+
+                                                   &              & Vol(\%)                  & \multicolumn{2}{|c|}{計算時間(s)}                     \\ \cline{2-3}
+      \hline
+      \multicolumn{2}{|c||}{Ramos(case1$\sim$100)} & 94           & \multicolumn{2}{|c|}{60}                                                         \\ \cline{2-3}
+      \hline
+      \hline
+      問題                                         & 直方体の個数 & Vol(\%)                  & Step1:計算時間(s)                 & Step2:計算時間(s) \\
+      \hline
+      case1                                        & 112個        & 82                       & 600                               & 120               \\
+      \hline
+      case2                                        & 138個        & 87                       & 404                               & 2,085             \\
+      \hline
+      case3                                        & 127個        & 85                       & 601                               & 596               \\
+      \hline
+      case4                                        & 197個        & 53                       & 1,238                             & 778               \\
+      \hline
+      case5                                        & 136個        & 79                       & 969                               & 1,474             \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{}
+\end{table}
+\newpage
+\chapter{考察}
+\vspace{2cm}
+計算時間、充填率ともに先行研究に勝ることはなかった。ヒューリスティックが優位であるが、充填率は80\%付近まであり、変数の数が減るような定式化、またCPUの性能向上に伴い計算時間、充填率ともに向上していくと考えられる。
+
+提案アルゴリズムでは、問題case4のように、入れる直方体の数が多くなると変数が増え計算時間も大幅に増えてしまう。しかし、case１とcase2を比較してみるとcase2の方が直方体の個数が多いにもかかわらず充填率はcase1よりも高くなっている。これはcase1で扱われている直方体の大きさより比較的小さい直方体がcase2で扱われているためであると考えられる。個数の多寡によらず詰め込む直方体のサイズが小さい問題例に対して有効であると考えられる。\\
+また、図5.1より80個以下の少ない個数の直方体から成る問題例に対しては60秒以内に厳密解を求めることができており、そのような問題例に対して提案手法は有効であると考えられる。
+
+
+\newpage
+\chapter{まとめと今後の課題}
+\vspace{1cm}
+実用的な負荷分散まで考慮したコンテナ積み付け問題を混合整数計画問題として定式化することができた。その際、直方体の個数の増加によって求解が不可能になったが、全て詰め込む定式化と選んで詰め込む定式化の2種類を用いた、解の探索アルゴリズムを提案することで実用時間で求解することができた。先行研究には計算時間、充填率で勝ることはなかったが110個$\sim$140個の直方体から選んで詰め込む問題に対しては80$\%$程度の充填率であった。また80個以下の直方体詰める問題では高速に厳密解を求めることができた。
+
+今後の課題としては、提案手法を適用した問題例が少ないため、多くの問題に適用しどのような問題例に対して有効なのか示すことや、変数の数を減らすような上手い定式化をすることで計算時間の短縮を目指すことや、本研究での制約の他に、荷物の配送順や軽い荷物の上に重い荷物を載せないなど、より現実的制約を考慮した定式化を与えることが考えられる。
+\newpage
+\begin{flushleft}
+  {\Huge\textbf{謝辞}}
+\end{flushleft}
+\vspace{2cm}
+本研究を進めるにあたり、多大なご指導、ご助言をいただいた池辺淑子准教授、西田優樹助教には大変お世話になりました。心より感謝と御礼申し上げます。
+\newpage
+\begin{thebibliography}{99}
+  \bibitem{bani}Morton R.H.,Fitz-Clarke J.R. , and Banister E.W. (1990) Modeling human performance in running. J Appl Physiol. 69(3): 1171-1177.
+  \bibitem{fitfig}Banister E.W. (1991) Modeling elite athletic performance. In: Green H.J., McDugal J.D., and Wenger H. (ed). Physiological testing of elite athletes. Human Kinetics, Campaign IL. pp 403-424.
+  \bibitem{fitfig1}「フィットネスー疲労モデル」を用いたトレーニング刺激と生体応答のモニタリングとパフォーマンス予測，URL(https://system5-site-one.ssl-link.jp/sandcplanning/uploads/solution/20/5b14a2d1f169020.pdf),閲覧日2023年1月4日
+\end{thebibliography}
+\end{document}
