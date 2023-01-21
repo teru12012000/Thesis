@@ -76,20 +76,16 @@
 \end{center}
 \vspace{3cm}
 \large
-今日，学生や一般市民が多くのスポーツ競技に参加している．その中で経験豊富な指導者の指導が受けられる人は少ない．
-経験豊富な指導者の指導が受けられない場合は，本人自らが練習メニューを決めなければならない
-一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的に強度が高い練習を継続していくほど
-疲労は蓄積し，試合で満足のいく結果が出せなくなってしまう．逆に，強度の低い練習ばかり実施したり
-全く練習をしなかったりすると競技力の不足によって同じく試合で満足のいく結果が出せなくなる．
-このように試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．
-トレーニングに関する理論として1970年から1990年代にかけてBanistaerを中心とした研究グループによって
-フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する\cite{banister}．
-フィットネス疲労理論\cite{banister}はトレーニングをすると
-身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
+今日，学生や一般市民が多くのスポーツ競技に参加しているが経験豊富な指導者の指導が受けられない人が存在する．
+その場合は，本人自らが練習メニューを決めなければならない．一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．
+しかし，試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．
+トレーニングに関する理論として1970年から1990年代にかけてBanisterを中心とした研究グループによって
+フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する．この理論
+はトレーニングをすると身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
 とるとパフォーマンスが算出されるという考え方に基づく理論である．
-本研究では，陸上競技の長距離種目を例にフィットネス疲労理論\cite{banister}を用いて走力を向上させるために
-パフォーマンスを低下させずにフィットネスを向上させると事を目的に最適なトレーニングメニューの作成を定式化し，
-出力された練習メニューを実施して実際に行われた試合にどのような影響が出たのかを検証した．
+本研究では，陸上競技の長距離種目を例にフィットネス疲労理論を用いて走力を向上させるために
+パフォーマンスを低下させずにフィットネスを向上させると事を目的に最適なトレーニングメニューの作成のための定式化をシミュレーション等を通して行った．その定式化されたものを解き出力された練習メニューを実施して実際に行われた試合にどのような影響が出たのかを検証したところ，
+ピーキングはあっていたが走力を向上しなかったという結果が得られた．
 %\cite{fitfig}
 \newpage
 \thispagestyle{empty}
@@ -98,7 +94,14 @@
   {\huge Abstract}
 \end{center}
 \vspace{3cm}
-
+Today, there are students and the general public who participate in sports but don't have access to experienced coaches.
+In the case, they must decide their own training menu.
+On the other hand, it is necessary to practice with appropriate amount and quality in order to achive good results in games.
+However, it is not easy to adjust traning menus to achive good results in games.
+As a theory of training, the "Fitness-Fatigue" existed from the 1970s to the 1990s, when a group of researchers led by Banister developed a mathematical model of fitness, fatigue, and performance.
+This theory is based on the idea that training causes two factors: fitness, which is positive for the body, and fatigue, which is negative for the body, and that the sum of the two is used to calculate performance.
+In this thesis, using the example of long-distance track and field events, this theory was formulated through simulation to create an optimal training menu with the goal of improving fitness without decreasing performance in order to improve running ability.
+When the formulation was solved and the output practice menu was implemented to verify how it affected the actual game, the results showed that the peaking was correct but did not improve the running ability.
 
 
 \newpage
@@ -114,12 +117,18 @@
 \newpage
 \chapter{はじめに}
 \large
-今日，学生や一般市民が多くのスポーツ競技に参加している．その中で経験豊富な指導者の指導が受けられる人は少ない．
+今日，学生や一般市民が多くのスポーツ競技に参加している．
+近年，運動やスポーツをする人が減っているとはいえ，令和3年度の「スポーツの実施状況等に関する世論調査」
+によると20000件の標本のうち56.5\%が週1日以上運動やスポーツをしていて，半分以上の人が実施しているといえる\cite{sports1}．
+運動やスポーツをする目的は様々である．例えば運動不足解消であったり体力増進・意地をしたいなどの理由がある．
+その中でも自己記録や能力を向上させたいという人もいる．このような人たちは経験豊富な指導者を受けるべきである．
+しかし，経験豊富な指導者の指導が受けられる人は少ない．令和3年度の中学校と高等学校の学校運動部部活動の指導者をしている人の中で
+経験がない人が顧問をしている，経験はあるが実技指導力が不足しているという人が存在する．
 経験豊富な指導者の指導が受けられない場合は，本人自らが練習メニューを決めなければならない
-一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的には，強度が高い練習を継続していくほど
+一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的に強度が高い練習を継続していくほど
 疲労は蓄積し，試合で満足のいく結果が出せなくなってしまう．逆に，強度の低い練習ばかり実施したり
-全く練習をしなかったりすると競技力の不足により同じく試合で満足のいく結果が出せなくなる．
-このようにトレーニングメニューの調整をするのが容易ではない．トレーニングに関する理論として1970年から1990年代にかけてBanisterを中心とした研究グループによって
+全く練習をしなかったりすると競技力の不足によって同じく試合で満足のいく結果が出せなくなる．
+このように試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．トレーニングに関する理論として1970年から1990年代にかけてBanisterを中心とした研究グループによって
 フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する\cite{bani}．
 フィットネス疲労理論\cite{bani}は，トレーニングをすると
 身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
@@ -531,6 +540,8 @@ $T=30$などといった長い期間での実施をするべきであり，そ�
 \begin{thebibliography}{99}
   \bibitem{bani}Morton R.H.,Fitz-Clarke J.R. , and Banister E.W. (1990) Modeling human performance in running. J Appl Physiol. 69(3): 1171-1177.
   \bibitem{fitfig}Banister E.W. (1991) Modeling elite athletic performance. In: Green H.J., McDugal J.D., and Wenger H. (ed). Physiological testing of elite athletes. Human Kinetics, Campaign IL. pp 403-424.
-  \bibitem{fitfig1}「フィットネスー疲労モデル」を用いたトレーニング刺激と生体応答のモニタリングとパフォーマンス予測，URL(https://system5-site-one.ssl-link.jp/sandcplanning/uploads/solution/20/5b14a2d1f169020.pdf),閲覧日2023年1月4日
+  \bibitem{fitfig1}「フィットネスー疲労モデル」を用いたトレーニング刺激と生体応答のモニタリングとパフォーマンス予測，URL(https://system5-site-one.ssl-link.jp/sandcplanning/uploads/solution/20/5b14a2d1f169020.pdf),閲覧日2023年1月20日
+  \bibitem{sports1}「令和3年度スポーツの実施状況等に関する世論調査」結果の概要，URL(https://www.mext.go.jp/sports/content/20220222-spt\_kensport01-000020451\_1.pdf),閲覧日2023年1月20日
+  \bibitem{sports2}学校運動部活動指導者の実態に関する調査報告書,url(https://www.japan-sports.or.jp/Portals/0/data/katsudousuishin/doc/R3\_houkokusho.pdf),閲覧日2023年1月20日
 \end{thebibliography}
 \end{document}
