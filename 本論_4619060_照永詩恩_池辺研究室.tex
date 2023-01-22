@@ -429,14 +429,14 @@ $x_{3,3}=x_{7,3}=x_{10,4}=1$とした．
 定式化(\ref{eq:max})式$\sim$ (\ref{eq:st3})式を以下のように変更した．
 \newpage
 \begin{eqnarray}
-  \mathop{\rm MAXIMIZE}&\ \ &\sum_{i=1}^t \{(1.1x_{i1}+16.5x_{i2})D_{i}+35x_{i3}+40x_{i4}\}e^{\frac{-(t-i)}{45}}\label{eq:max1}\\%(10)
+  \mathop{\rm MAXIMIZE}&\ \ &\sum_{i=1}^T \{(1.1x_{i1}+16.5x_{i2})D_{i}+35x_{i3}+40x_{i4}\}e^{-\frac{t-i}{45}}\label{eq:max1}\\%(10)
   \mathop{\rm subject\ to}&\ \ &\sum_{j=1}^4 x_{ij}\leq 1\label{eq:st12}\\%(11)
   &&8\leq D_{i} \leq 12\label{eq:st2}\\%(12)
-  &&p(t)\geq -100\ \ (i=6,8,13)\label{eq:st32}\\%(13)
-  &&\sum_{i=1}^n x_{i1}+x_{i2}\geq 5\label{eq:st42}\\%(14)
-  &&\sum_{i=1}^n x_{i1}\geq 1\label{eq:st52}\\%(15)
-  &&\sum_{i=1}^n x_{i4}=2\label{eq:st6}\\%(16)
-  &&\sum_{i=1}^n x_{i7}=1\label{eq:st7}\\%(17)
+  &&p(i)\geq -100\ \ (i=6,8,13)\label{eq:st32}\\%(13)
+  &&\sum_{i=1}^4 x_{i1}+x_{i2}\geq 5\label{eq:st42}\\%(14)
+  &&\sum_{i=1}^T x_{i1}\geq 1\label{eq:st52}\\%(15)
+  &&\sum_{i=1}^T x_{i4}=2\label{eq:st6}\\%(16)
+  &&\sum_{i=1}^T x_{i7}=1\label{eq:st7}\\%(17)
   &&x_{i4}=1\ \ (i=2,6)\label{eq:st8}\\%(18)
   &&x_{i5}=1\ \ (i=9)\label{eq:st9}%(19)
 \end{eqnarray}
