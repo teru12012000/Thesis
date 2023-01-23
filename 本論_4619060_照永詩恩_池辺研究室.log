@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.5.1)  23 JAN 2023 17:58
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.5.1)  23 JAN 2023 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,28 +450,28 @@ File: 1.png Graphic file (type bmp)
 File: sim1.png Graphic file (type bmp)
 <sim1.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 342--343
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 341--342
  [][] 
  []
 
 File: sim2.png Graphic file (type bmp)
 <sim2.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 347--348
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 346--347
  [][] 
  []
 
 File: sim3.png Graphic file (type bmp)
 <sim3.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 352--353
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 351--352
  [][] 
  []
 
 File: sim4.png Graphic file (type bmp)
 <sim4.png>
 
-Overfull \hbox (13.70227pt too wide) in paragraph at lines 357--358
+Overfull \hbox (13.70227pt too wide) in paragraph at lines 356--357
  [][] 
  []
 
@@ -486,12 +486,12 @@ Overfull \hbox (13.70227pt too wide) in paragraph at lines 357--358
 [17
 
 ] [18]
-Underfull \hbox (badness 2435) in paragraph at lines 535--536
+Underfull \hbox (badness 2435) in paragraph at lines 534--535
 [] \JY1/mc/m/n/14.4 「 令和 \OT1/cmr/m/n/14.4 3 \JY1/mc/m/n/14.4 年度スポ ーツの実施状況等に関する世論調査 」 結果の概要 ，
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 \OT1/cmr/m/n/14.4 URL(https://www.mext.go.jp/sports/content/20220222-spt[]kensport01-
  []
 
@@ -505,6 +505,6 @@ Here is how much of TeX's memory you used:
  20286 multiletter control sequences out of 15000+600000
  552839 words of font info for 112 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 48i,12n,46p,379b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,46p,383b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 本論_4619060_照永詩恩_池辺研究室.dvi (25 pages, 53944 bytes).
+Output written on 本論_4619060_照永詩恩_池辺研究室.dvi (25 pages, 53968 bytes).
