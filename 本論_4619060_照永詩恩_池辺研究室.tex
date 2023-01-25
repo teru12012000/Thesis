@@ -53,7 +53,7 @@
 \begin{center}
   {\LARGE \underline{Optimal practice combinations }\\
     \vspace{0.2cm}
-    \underline{for long distance events in track and field}
+    \underline{for long distance sports in track and field}
   }\\
 \end{center}
 \vspace{3cm}
@@ -80,7 +80,7 @@
 その場合は，本人自らが練習メニューを決めなければならない．試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．
 しかし，試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．
 トレーニングに関する理論としてBanisterを中心とした研究グループによって提案された，
-フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する．この理論
+フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが確立された．この理論
 はトレーニングをすると身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
 とるとパフォーマンスが算出されるという考え方に基づく理論である．
 本研究では，陸上競技の長距離種目を例にとり，フィットネス疲労理論を用いて練習メニューの作成を数理計画問題として定式化した．
@@ -95,14 +95,14 @@
   {\huge Abstract}
 \end{center}
 \vspace{3cm}
-Today, there are students and citizens who participate in sports but do not have access to experienced coaches.
-In the case, they must decide their own training menu.
-It is necessary to practice with appropriate amount and quality in order to achive good results in games.
+Today, there are many students and citizens who participate in sports but do not have access to experienced coaches.
+In the case, they must create their own training menu.
+It is necessary to practice with appropriate amount and quality in order to achive good results in competitions.
 However, it is not easy to adjust traning menus to that purpose.
 As a theory of training, "Fitness-Fatigue" (FF) theory was developed by a researchers group led by Banister.
 This theory is based on the idea that training causes two factors: fitness, which is positive for the body, and fatigue, which is negative, and that the sum of the fitness and fatigue yields performance.
-In this thesis, a mathematical programming problem for the training menu of long-distance track and field events was formulated using FF theory. Simulations were conducted to determine paramaters that provides an optimal training menu improving the running ability without decreasing performance..
-The obtained practice menu was implemented to verify how it affected the actual game. The results showed that the peaking was correct but the running ability was not improved.
+In this thesis, a mathematical programming problem for the training menu of long-distance track and field events was applied using FF theory. Simulations were conducted to determine paramaters that provides an optimal training menu improving the running ability without decreasing performance.
+The obtained practice menu was implemented to verify how it affected the actual results. The results showed that the peaking was correct but the running ability was not improved.
 
 
 \newpage
@@ -123,14 +123,14 @@ The obtained practice menu was implemented to verify how it affected the actual 
 によると20000件の標本のうち56.5\%が週1日以上運動やスポーツをしていて，半分以上の人が実施しているといえる\cite{sports1}．
 運動やスポーツをする目的は様々である．例えば運動不足解消であったり体力増進・意地をしたいなどの理由がある．
 その中でも自己記録や能力を向上させたいという人もいる．このような人たちは経験豊富な指導者を受けるべきである．
-しかし，経験豊富な指導者の指導が受けられる人は少ない．令和3年度の中学校と高等学校における調査によると，
-学校運動部部活動の指導者をしている人の中で経験がないが顧問をしている，経験はあるが実技指導力が不足しているという人が存在する\cite{sports2}．
+しかし，実際には経験豊富な指導者の指導が受けられる人は少ない．令和3年度の中学校と高等学校における調査によると，
+学校運動部部活動の指導者は経験がない人，あるいは経験はあるが実技指導力が不足しているという人が顧問をしていることがある\cite{sports2}．
 経験豊富な指導者の指導が受けられない場合は，本人自らが練習メニューを決めなければならない
 一方で試合で良い結果を出すためには，適切な量と質の練習を行う必要がある．一般的に強度が高い練習を継続していくほど
 疲労は蓄積し，試合で満足のいく結果が出せなくなってしまう．逆に，強度の低い練習ばかり実施したり
 全く練習をしなかったりすると競技力の不足によって同じく試合で満足のいく結果が出せなくなる．
 このように試合で良い結果を出すためのトレーニングメニューの調整をするのが容易ではない．トレーニングに関する理論として1970年から1990年代にかけてBanisterを中心とした研究グループによって
-フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが存在する\cite{bani}．
+フィットネス，疲労，パフォーマンスを数理モデル化したフィットネス疲労理論というものが確立された\cite{bani}．
 フィットネス疲労理論は，トレーニングをすると
 身体にプラスなフィットネスと身体にマイナスな疲労の2要素が引き起こされ両者の和を
 とるとパフォーマンスが算出されるという考え方に基づく理論である．
@@ -323,13 +323,13 @@ The obtained practice menu was implemented to verify how it affected the actual 
       \hline
         & 最終日のフィットネス & 最終日の疲労 & 最終日のパフォーマンス \\
       \hline
-      1 & 373.40               & -431.92      & -58.82                 \\
+      1 & 378.06               & -466.72      & -88.66                 \\
       \hline
-      2 & 500.84               & -611.18      & -110.34                \\
+      2 & 502.21               & -603.74      & -101.53                \\
       \hline
-      3 & 521.18               & -613.47      & -92.29                 \\
+      3 & 538.06               & -641.09      & -103.03                \\
       \hline
-      4 & 384.55               & -459.22      & -74.67                 \\
+      4 & 399.33               & -487.18      & -87.85                 \\
       \hline
     \end{tabular}
   \end{center}
